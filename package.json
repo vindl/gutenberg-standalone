@@ -2,7 +2,9 @@
   "name": "gutenberg-standalone",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://vindl.github.io/gutenberg-standalone",
   "dependencies": {
+    "gh-pages": "^1.2.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-scripts": "1.1.5"
@@ -11,6 +13,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   }
 }
