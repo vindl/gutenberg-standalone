@@ -34,21 +34,23 @@ dispatch( 'core/nux' ).disableTips();
 class GutenbergEditor extends Component {
 	render() {
 		return (
-            <EditorProvider settings={ editorSettings } post={ post }>
-                <ErrorBoundary onError={ () => {} }>
-                    <BlockSelectionClearer>
-                        <EditorGlobalKeyboardShortcuts />
-                        <CopyHandler />
-                        <MultiSelectScrollIntoView />
-                        <WritingFlow>
-	                        <ObserveTyping>
-		                        <PostTitle />
-		                        <BlockList />
-	                        </ObserveTyping>
-                        </WritingFlow>
-                    </BlockSelectionClearer>
-                </ErrorBoundary>
-            </EditorProvider>
+			<div className="editor-container">
+	            <EditorProvider settings={ editorSettings } post={ post }>
+	                <ErrorBoundary onError={ () => {} }>
+	                    <BlockSelectionClearer>
+	                        <EditorGlobalKeyboardShortcuts />
+	                        <CopyHandler />
+	                        <MultiSelectScrollIntoView />
+	                        <WritingFlow>
+		                        <ObserveTyping>
+			                        <PostTitle />
+			                        <BlockList />
+		                        </ObserveTyping>
+	                        </WritingFlow>
+	                    </BlockSelectionClearer>
+	                </ErrorBoundary>
+	            </EditorProvider>
+			</div>
 		);
 	}
 }
