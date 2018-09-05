@@ -35,21 +35,21 @@ class GutenbergEditor extends Component {
 	render() {
 		return (
 			<div className="editor-container">
-	            <EditorProvider settings={ editorSettings } post={ post }>
-	                <ErrorBoundary onError={ () => {} }>
-	                    <BlockSelectionClearer>
-	                        <EditorGlobalKeyboardShortcuts />
-	                        <CopyHandler />
-	                        <MultiSelectScrollIntoView />
-	                        <WritingFlow>
-		                        <ObserveTyping>
-			                        <PostTitle />
-			                        <BlockList />
-		                        </ObserveTyping>
-	                        </WritingFlow>
-	                    </BlockSelectionClearer>
-	                </ErrorBoundary>
-	            </EditorProvider>
+				<EditorProvider settings={ editorSettings } post={ post }>
+					<ErrorBoundary onError={ () => {} }>
+						<BlockSelectionClearer>
+							<EditorGlobalKeyboardShortcuts />
+							<CopyHandler />
+							<MultiSelectScrollIntoView />
+							<WritingFlow>
+								<ObserveTyping>
+									<PostTitle />
+									<BlockList />
+								</ObserveTyping>
+							</WritingFlow>
+						</BlockSelectionClearer>
+					</ErrorBoundary>
+				</EditorProvider>
 			</div>
 		);
 	}
