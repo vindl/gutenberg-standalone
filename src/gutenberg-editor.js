@@ -21,7 +21,7 @@ const editorSettings = {};
 
 const post = {
 	type: 'post',
-	content: 'test content',
+	content: { raw: 'test content' }
 };
 
 registerCoreBlocks();
